@@ -17,5 +17,13 @@ def main():
     print(f"Sentence: {test_sentence}")
     print(f"Predicted Tags: {predicted_tags}")
 
+class POSTagger:
+    def __init__(self, hmm_model):
+        self.hmm_model = hmm_model
+
+    def tag_sentence(self, sentence):
+        return self.hmm_model.predict(sentence)
+
+
 if __name__ == "__main__":
     main()
